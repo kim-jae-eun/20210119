@@ -15,8 +15,15 @@ d = Book('파이썬 웹프로그래밍', '김석훈', 22000)
 e = Book('맛있는 MongoDB', '정승호', 28000)
 books = [a, b, c, d, e]
 for i in books:
-    for j in i.getBookInfo().replace('"','').split(','):
+    for j in i.getBookInfo().replace('"', '').split(','):
         print(j)
     print('-' * 9)
+
 # print(a.getBookInfo())
 # print(b.getBookInfo())
+
+print('\n\n\n')
+# 이렇게도 가능!
+for i in books:
+    print(i.getBookInfo().replace('"', '').replace(',', '\n'))
+    print('-' * 9)
